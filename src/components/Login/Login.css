@@ -1,0 +1,314 @@
+:root {
+
+  --primary-orange: #f37021;
+
+  --accent-orange: #ff8c42;
+
+  --bg-light: #ffffff;
+
+  --text-dark: #333333;
+
+  --input-bg: #f9f9f9;
+
+  --border-gray: #cccccc;
+
+}
+ 
+.login-container {
+
+  display: flex;
+
+  height: 100vh;
+
+  width: 100vw;
+
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+
+  background: var(--bg-light);
+
+  overflow: hidden;
+
+}
+
+
+.login-left {
+
+  flex: 1;
+
+  background-image: url('https://sgmark.org/wp-content/uploads/winners/6598/file-entry-2.webp');
+
+  background-size: cover;
+
+  background-position: center;
+
+  position: relative;
+
+}
+
+.login-left::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(243, 112, 33, 0.3);
+
+}
+ 
+
+
+.login-right {
+
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 2rem;
+
+  background-color: var(--bg-light);
+
+}
+ 
+.login-box {
+
+  width: 100%;
+
+  max-width: 400px;
+
+  background: #fff;
+
+  padding: 2.5rem;
+
+  border-radius: 12px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+}
+ 
+.login-title {
+
+  font-size: 2rem;
+
+  font-weight: bold;
+
+  color: var(--primary-orange);
+
+  text-align: center;
+
+  margin-bottom: 0.5rem;
+
+}
+ 
+.login-subtitle {
+
+  color: var(--text-dark);
+
+  font-size: 0.95rem;
+
+  text-align: center;
+
+  margin-bottom: 2rem;
+
+}
+ 
+.login-label {
+
+  font-size: 0.85rem;
+
+  color: var(--text-dark);
+
+  font-weight: 600;
+
+  margin-bottom: 0.3rem;
+  text-align: left;
+
+  display: block;
+
+}
+ 
+.login-input {
+
+  width: 100%;
+
+  padding: 0.85rem;
+
+  background: var(--input-bg);
+
+  border: 1px solid var(--border-gray);
+
+  border-radius: 8px;
+
+  font-size: 1rem;
+
+  color: var(--text-dark);
+
+  margin-bottom: 1rem;
+
+  transition: border 0.3s;
+
+}
+
+.login-input:focus {
+
+  border-color: var(--primary-orange);
+
+  outline: none;
+
+}
+ 
+.login-remember {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin-bottom: 1.2rem;
+
+}
+ 
+.login-checkbox {
+
+  appearance: none;
+
+  width: 18px;
+
+  height: 18px;
+
+  border: 2px solid var(--border-gray);
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  background: #fff;
+
+}
+
+.login-checkbox:checked {
+
+  background-color: var(--primary-orange);
+
+  border-color: var(--primary-orange);
+
+}
+
+.login-checkbox:checked::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 2px;
+
+  left: 6px;
+
+  width: 4px;
+
+  height: 8px;
+
+  border: solid #fff;
+
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+
+}
+ 
+.login-button {
+
+  width: 100%;
+
+  padding: 0.9rem;
+
+  background: linear-gradient(to right, var(--primary-orange), var(--accent-orange));
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: #fff;
+
+  font-size: 1rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+}
+
+.login-button:hover {
+
+  box-shadow: 0 8px 18px rgba(243, 112, 33, 0.2);
+
+  transform: translateY(-2px);
+
+}
+ 
+.login-footer {
+
+  text-align: center;
+
+  font-size: 0.85rem;
+
+  margin-top: 1.5rem;
+
+  color: #666;
+
+}
+
+.login-footer a {
+
+  color: var(--primary-orange);
+
+  text-decoration: none;
+
+}
+
+.login-footer a:hover {
+
+  text-decoration: underline;
+
+}
+ 
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .login-container {
+
+    flex-direction: column;
+
+  }
+
+  .login-left {
+
+    height: 35vh;
+
+  }
+
+}
+
+ .login-input select,
+select.login-input {
+  appearance: none;
+  background: var(--input-bg);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  padding: 0.85rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  width: 100%;
+  margin-bottom: 1rem;
+}
